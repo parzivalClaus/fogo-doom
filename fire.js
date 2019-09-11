@@ -1,8 +1,8 @@
 // Cria o array com contagem dos pixels!
 const firePixelsArray = [];
 // Define a altura e largura do nosso fogo
-const fireWidth = 80;
-const fireHeight = 40;
+const fireWidth = 50;
+const fireHeight = 50;
 
 // Cria as palheta de cores
 // Palheta Vermelha
