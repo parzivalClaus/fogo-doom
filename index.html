@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Doom Fire</title>
+        <style>
+            body {
+                background-color: #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            table {
+                border-collapse: collapse;
+                border: 1px solid #fff;
+                
+            }
+
+            td {
+                width: 60px;
+                height: 30px;
+                border: 1px solid #000;
+                text-align: center;
+                vertical-align: center;
+                font-family: monospace;
+                font-size: 10px;
+                position: relative;
+                color: #fff;
+            }
+
+            .pixel-index {
+                font-size: 2px;
+                display: inline-block;
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                color: #999;
+            }
+
+           button {
+               margin: 5px 0px;
+           }
+
+            td.pixel {
+                width: 5px;
+                height: 5px;
+                border: 0;
+            }
+
+            div#botoes {
+               text-align: center;
+               margin-top: 15px;
+            }
+
+
+            .tamanhoFogo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .tamanhoFogo > button {
+                margin: 0 3px;
+            }
+        </style>
+    </head>
+    <body>
+
+        
+        <div id="fireCanvas"></div>
+        <div id="botoes">
+            <button id="posicaoVento" onclick="mudarVento();">Mudar Posição do Vento</button>
+            <div class="tamanhoFogo">
+                <button id="aumentarFogo" onclick="mudarFogo('aumentar');">+</button>
+                <button id="diminuirFogo" onclick="mudarFogo('diminuir');">-</button>
+            </div>
+            <div class="forcaVento">
+                <button id="parado" onclick="mudarForcaVento('parado');">Parado</button>
+                <button id="brisa" onclick="mudarForcaVento('brisa');">Brisa</button>
+                <button id="vendaval" onclick="mudarForcaVento('vendaval');">Vendaval</button>
+            </div>
+            <button id="corFogo" onclick="mudarCorFogo();">Mudar Cor do Fogo</button>
+            <button id="debugMode" onclick="modoDebug();">Debug Mode</button>
+        </div>
+
+        <script src="fire.js"></script>
+    </body>
+</html>
